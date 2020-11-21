@@ -49,4 +49,4 @@ keras==2.4.3
 scipy==1.5.4
 seaborn==0.11.0
 
-altair==3.4.0
+plotly==4.12.0

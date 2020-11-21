@@ -9,6 +9,7 @@ import matplotlib
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import hist
+import plotly.express as px
 from keras.utils import to_categorical
 from tensorflow.keras.models import Sequential, Model 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -25,7 +26,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 import streamlit as st
 import streamlit.components.v1 as components
-import altair as alt
+
 
 def main():
     # Register pages
@@ -171,6 +172,10 @@ def Graph():
     st.pyplot()
     st.write('***Statistical Data Analysis***')
     st.table(train_data.describe())
+
+    # cases_count_1 = train_data['label'].value_counts()
+    # px.scatter(x=cases_count_1.index, y= cases_count_1.values, opacity=0.05, trendline='ols')
+    # px.scatter(range(len(cases_count_1.index)), ['lung Normal(0)', 'lung with Pneumonia(1)'])
 
     #Graph train data
     # hist = (train_data.label).transpose() 
