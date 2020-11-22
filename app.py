@@ -26,6 +26,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 import streamlit as st
 import streamlit.components.v1 as components
+import cv2
 
 
 def main():
@@ -43,12 +44,16 @@ def main():
     pages[page]()
 
 def Home():
+     # def load_image(convolutional):
+    #     img = Image.open(convolutional)
+    #        return st.image(img, width=300)
     def main():
         st.markdown("<h1 style='text-align: center; color: #002966;'>Image Classification</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center; color: #002966;'>Identifying Patients with Pneumonia</h1>", unsafe_allow_html=True)
+        
         st.write(
         """
-        Artificial Intelligence  ! 
+        Deep Learning - Learn Neural Network Modeling! 
         
         :
         -   
@@ -58,6 +63,8 @@ def Home():
         -  
         ---
         """)
+        img = Image.open('convolutional.png')
+        st.image(img, width=700)
         page_bg_img = '''
             <style>
             body {
@@ -121,8 +128,8 @@ title_temp = """
 	    <div class="container" id="About App">
 	      <div class="row">
 	        <div class="col l6 s12">
-                <h5 class="black-text">Artificial Intelligence</h5>
-	          <p class="grey-text text-lighten-4">Using Streamlit, Seaborn, Sklearn, Tensorflow,  Keras.</p>
+                <h4 class="black-text">Machine Learning and Bid Data</h5>
+	          <p class="grey-text text-lighten-4">Using Streamlit, Seaborn, Tensorflow,  Keras, Matplotlib.</p>
 	        </div>     
 	  </footer>
 	"""
