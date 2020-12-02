@@ -47,36 +47,40 @@ def main():
     pages = {
         "Home": Home,
         "Graphs": Graph,
-        "Labels": label,
+        "Labels": Predict_by_label,
         "Prediction_model": Prediction_model,
-        # 'Statement': Statement,
-        # "Stock": Stock,
-        # "Profit": Profit,
+
     }
     st.sidebar.title("Image Analysis")
     page = st.sidebar.selectbox("Select Menu", tuple(pages.keys()))
     pages[page]()
 
 def Home():
-     # def load_image(convolutional):
-    #     img = Image.open(convolutional)
-    #        return st.image(img, width=300)
+
     def main():
         st.markdown("<h1 style='text-align: center; color: #002966;'>Image Classification</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='text-align: center; color: #002966;'>Identifying Patients with Pneumonia</h1>", unsafe_allow_html=True)
-        
         st.write(
         """
         Deep Learning - Learn Neural Network Modeling! 
         
-        :
-        -   
-        -  
-        - 
-        -  
-        -  
+        Use Image classification to identify healty or not lung (Pneumonia) use Neural Network models:
+        -  Image recognintion uses Artificial Intelligent technology to identify objects.
+        -  Requieres Big data as image labels and a lot of computing power.
+        -  TensorFlow create a convolutional layer and final prediction.
+        -  CNN is a architecture designed to process and correlate images. 
+        -  Image preparation include: 
+                    - Image size.
+                    - Number of images.
+                    - Aspect ratio.
+                    - Image scaling. 
+                    - Mean.
+                    - Standard deviation of input date.
+                    - Normalizing image inputs. 
+                    - Dimensionality reduction.
         ---
         """)
+        st.markdown("<h1 style='text-align: center; color: #002966;'>Process Convolutional: recognition by Artificial Intelligence, applied to analyzing visual imagee</h1>", unsafe_allow_html=True)
         img = Image.open('convolutional.png')
         st.image(img, width=700)
         page_bg_img = '''
@@ -143,7 +147,7 @@ title_temp = """
 	      <div class="row">
 	        <div class="col l6 s12">
                 <h4 class="black-text">Machine Learning and Bid Data</h5>
-	          <p class="grey-text text-lighten-4">Using Streamlit, Seaborn, Tensorflow,  Keras, Matplotlib.</p>
+	          <p class="grey-text text-lighten-4">Using Streamlit, Pandas, Numpy, Seaborn, Tensorflow,  Keras, Matplotlib.</p>
 	        </div>     
 	  </footer>
 	"""
@@ -195,15 +199,8 @@ def Graph():
     st.write('***Statistical Data Analysis***')
     st.table(train_data.describe())
 
-    # cases_count_1 = train_data['label'].value_counts()
-    # px.scatter(x=cases_count_1.index, y= cases_count_1.values, opacity=0.05, trendline='ols')
-    # px.scatter(range(len(cases_count_1.index)), ['lung Normal(0)', 'lung with Pneumonia(1)'])
+def Predict_by_label():
 
-    #Graph train data
-    # hist = (train_data.label).transpose() 
-    # st.bar_chart(hist)
-
-def label():
     page_bg_img = '''
             <style>
             body {
@@ -447,3 +444,6 @@ def Prediction_model():
 
 if __name__=='__main__':
     main()
+
+
+#https://git-lfs.github.com/
