@@ -38,10 +38,6 @@ import imageio
 from skimage import color, io
 import scipy.ndimage as nd
 
-
-
-
-
 def main():
     # Register pages
     pages = {
@@ -185,7 +181,6 @@ def Graph():
     train_data = pd.DataFrame(train_data, columns=['image', 'label'],index=None) #convert with pandas dataframe from the data list
     train_data = train_data.sample(frac=1.).reset_index(drop=True) # sample and reset index data 
     (train_data.info())
- 
 
     # #Plot 
     cases_count = train_data['label'].value_counts()
@@ -277,8 +272,6 @@ def Predict_by_label():
     test_a2.set_title('Positive for Pneumonia') 
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
-
-
 
 def Prediction_model():
     page_bg_img = '''
