@@ -80,7 +80,7 @@ def Home():
                     - Dimensionality reduction.
         ---
         """)
-        st.markdown("<h1 style='text-align: center; color: #002966;'>Process Convolutional: Recognition by Artificial Intelligence, applied to analyzing visual image.</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: #002966;'>Process Convolutional: recognition by Artificial Intelligence, applied to analyzing visual imagee</h1>", unsafe_allow_html=True)
         img = Image.open('convolutional.png')
         st.image(img, width=700)
         page_bg_img = '''
@@ -444,6 +444,3 @@ def Prediction_model():
 
 if __name__=='__main__':
     main()
-
-
-#https://git-lfs.github.com/
